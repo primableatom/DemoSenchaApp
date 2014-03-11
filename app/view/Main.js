@@ -1,10 +1,14 @@
 Ext.define('DemoSenchaApp.view.Main', {
-  extend: 'Ext.tab.Panel',
+  extend: 'Ext.navigation.View',
   xtype: 'main',
+  id: "naviview",
   requires: [
-    'DemoSenchaApp.view.StockFinder'
+    'DemoSenchaApp.view.Login'
   ],
   config: {
+    navigationBar: {
+      hidden: true
+    },    
     tabBar: {
       docked: 'bottom',
       layout: {
@@ -12,9 +16,7 @@ Ext.define('DemoSenchaApp.view.Main', {
       }
     },
     items: [{
-      xtype: 'compass-erpapp-mobile-stock_finder-application',
-      iconCls: 'home',
-      title: 'Stocks'
+      xtype: 'compass-ae-login'
     }]
   }
 });

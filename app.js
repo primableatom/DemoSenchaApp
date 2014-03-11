@@ -28,6 +28,10 @@ Ext.application({
   stores: [
     'Stocks'
   ],
+
+  controllers: [
+    'LoginController'
+  ],
   
   
   icon: {
